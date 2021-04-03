@@ -192,7 +192,7 @@ if args.only_predict:
     predictions = torch.cat(predictions, 0).unsqueeze(1).numpy()
     test_idx_and_pred = np.concatenate([test_idx, predictions], 1)
     pred_name = 'data/' + args.test_name.split('.')[0] + '_pred.txt'
-    np.savetxt(pred_name, test_idx_and_pred, fmt=['%d', '%d', '%1.2f'])
+    np.savetxt(pred_name, test_idx_and_pred, fmt=['%d', '%d', '%1.5f'])
     print('Predictions for {} are saved in {}'.format(args.test_name, pred_name))
     exit()
 
