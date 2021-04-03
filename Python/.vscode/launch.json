@@ -1,0 +1,33 @@
+{
+    "name": "Current project",
+    "type": "python",
+    "python": "${config.python.pythonPath}",
+    "request": "launch",
+    "console": "internalConsole",
+    "program": "${file}",
+    "cwd": "${workspaceRoot}",
+    "debugOptions": [
+        "WaitOnAbnormalExit",
+        "WaitOnNormalExit",
+        "RedirectOutput"
+    ],
+    "env": {
+        "name": "value"
+    },
+    "configurations": [
+
+
+        {
+            "name": "Predict - wsu_three_plus",
+            "type": "python",
+            "request": "launch",
+            "program": "Main.py",
+            "args": [
+                "--train-name", "graph_20180726_2_gc1_train.txt",
+                "--test-name", "graph_20180726_2_gc1_val_three_plus.txt",
+                "--hop", "1",
+                "--only-predict"],
+            "console": "integratedTerminal"
+        }
+    ]
+}
